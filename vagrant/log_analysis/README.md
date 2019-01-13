@@ -3,6 +3,7 @@ The log analysis reporting tool is used for running against the 'news' database 
 
 # Usage
 Prerequisites: ensure 'news' database is installed and psql has the appropriate user and permissions to execute the python script.
+
 `python3 log_analysis_reporting_tool.py`
 
 # Questions
