@@ -1,40 +1,51 @@
 #!/usr/bin/env python3
 #
+# Spencer Stenger
+# Log Analysis Assignment
+#
 # A log analysis tool for reporting.
 
-from logdb import question_1, question_2, question_3
+from logdb import popular_three_articles, popular_authors, log_errors
 
-QUESTION_1 = '''\nWhat are the most popular three articles of all time?'''
-QUESTION_2 = '''\nWho are the most popular article authors of all time?'''
-QUESTION_3 = '''\nOn which days did more than 1% of requests lead to errors?'''
+POPULAR_ARTICLES = '''
+What are the most popular three articles of all time?\
+'''
+POPULAR_AUTHORS = '''
+Who are the most popular article authors of all time?\
+'''
+LOG_ERRORS = '''
+On which days did more than 1% of requests lead to errors?\
+'''
 
-ANSWER = '''● %s — %s views\n'''
+VIEWS = '''● %s — %s views\n'''
+LOG_ERROR = '''● %s — %s%% errors\n'''
 
 
-def main():
-    one()
-    two()
-
-
-def one():
+def answer_one():
     '''Answer to question one, most popular three articles of all time.'''
-    print(QUESTION_1)
-    answer_1 = "".join(ANSWER % (title, num) for title, num in question_1())
+    print(POPULAR_ARTICLES)
+    answer_1 = "".join(VIEWS % (title, num) for title, num in popular_three_articles())
     print(answer_1)
 
 
-def two():
+def answer_two():
     '''Answer to question two, most popular authors of all time.'''
-    print(QUESTION_2)
-    answer_2 = "".join(ANSWER % (author, num) for author, num in question_2())
+    print(POPULAR_AUTHORS)
+    answer_2 = "".join(VIEWS % (author, num) for author, num in popular_authors())
     print(answer_2)
 
 
-def three():
+def answer_three():
     '''Answer to question three, which day had > 1% of request errors.'''
-    print(QUESTION_3)
-    answer_3 = "".join(ANSWER % (author, num) for author, num in question_3())
+    print(LOG_ERRORS)
+    answer_3 = "".join(LOG_ERROR % (date, errors) for date, errors in log_errors())
     print(answer_3)
+
+
+def main():
+    answer_one()
+    answer_two()
+    answer_three()
 
 
 if __name__ == '__main__':
