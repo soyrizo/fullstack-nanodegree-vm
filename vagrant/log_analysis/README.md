@@ -7,25 +7,25 @@ Prerequisites: ensure 'news' database is installed and psql has the appropriate 
 `python3 log_analysis_reporting_tool.py`
 
 # Questions
-It will answer the three questions listed below
+The tool answers three questions listed below.
   1) What are the most popular three articles of all time?
   2) Who are the most popular article authors of all time?
   3) On which days did more than 1% of requests lead to errors?
 
 # Answers (Output)
 What are the most popular three articles of all time?   
-● Candidate is jerk, alleges rival — 338647 views   
-● Bears love berries, alleges bear — 253801 views   
-● Bad things gone, say good people — 170098 views   
+  ● Candidate is jerk, alleges rival — 338647 views   
+  ● Bears love berries, alleges bear — 253801 views   
+  ● Bad things gone, say good people — 170098 views   
 
 Who are the most popular article authors of all time?   
-● Ursula La Multa — 507594 views   
-● Rudolf von Treppenwitz — 423457 views   
-● Anonymous Contributor — 170098 views   
-● Markoff Chaney — 84557 views   
+  ● Ursula La Multa — 507594 views   
+  ● Rudolf von Treppenwitz — 423457 views   
+  ● Anonymous Contributor — 170098 views   
+  ● Markoff Chaney — 84557 views   
 
 On which days did more than 1% of requests lead to errors?   
-● 2016-07-17 — 2.3% errors   
+  ● 2016-07-17 — 2.3% errors   
 
 # License
 Log Analysis Reporting Tool is released under the [MIT License](https://choosealicense.com/licenses/mit/).
